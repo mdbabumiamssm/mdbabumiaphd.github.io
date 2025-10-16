@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Distinguished Professor of Hematology and Medical Oncology at Icahn School of Medicine at Mount Sinai. Specializing in blood cancer research and bioinformatics.">
+    <meta name="keywords" content="Hematology, Medical Oncology, Blood Cancer, Bioinformatics, Single-cell Sequencing, Mount Sinai">
+    <title>Dr. [Your Name] - Hematology & Medical Oncology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2c5282;
+            --accent-color: #3182ce;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .bio p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Research Areas */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .research-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .research-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .research-card ul {
+            list-style-position: inside;
+            color: var(--text-color);
+        }
+
+        .research-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Publications */
+        .publications-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .publication-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .publication-meta {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-links {
+            margin-top: 1rem;
+        }
+
+        .publication-links a {
+            display: inline-block;
+            margin-right: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .publication-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Software Section */
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .software-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .software-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .software-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .software-card .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background: var(--light-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-photo {
+                margin: 0 auto;
+            }
+
+            .research-grid,
+            .software-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1>Dr. [Your Name]</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h2>Dr. [Your Full Name]</h2>
+        <p>Distinguished Professor of Hematology and Medical Oncology</p>
+        <p class="subtitle">Icahn School of Medicine at Mount Sinai</p>
+        <p class="subtitle">Specializing in Blood Cancer Research & Computational Biology</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="profile-photo">
+                    [PHOTO]
+                </div>
+                <div class="bio">
+                    <p>I am a Distinguished Professor of Hematology and Medical Oncology at the Icahn School of Medicine at Mount Sinai, where I lead cutting-edge research in blood cancer genomics and computational biology.</p>
+                    
+                    <p>My research focuses on understanding the molecular mechanisms underlying hematologic malignancies through advanced sequencing technologies and computational approaches. I specialize in single-cell multi-omics analysis, including scRNA-seq, scATAC-seq, scCITE-seq, and single-cell DNA sequencing.</p>
+                    
+                    <p>With expertise in both wet lab experimentation and bioinformatics, I bridge the gap between experimental biology and computational analysis. My work combines mathematical modeling, statistical analysis, and software development to uncover novel insights into cancer biology.</p>
+                    
+                    <p>As a mathematician and programmer, I develop innovative computational tools and algorithms for next-generation sequencing data analysis, with the goal of translating these findings into clinical applications.</p>
+                    
+                    <a href="#contact" class="btn">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+        <div class="container">
+            <h2>Research Areas</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>🧬 Blood Cancer Genomics</h3>
+                    <ul>
+                        <li>Molecular mechanisms of leukemia and lymphoma</li>
+                        <li>Clonal evolution in hematologic malignancies</li>
+                        <li>Therapeutic resistance mechanisms</li>
+                        <li>Precision medicine approaches</li>
+                    </ul>
+                </div>
+                <div class="research-card">
+                    <h3>🔬 Single-Cell Multi-Omics</h3>
+                    <ul>
+                        <li>scRNA-seq for tumor heterogeneity</li>
+                        <li>scCITE-seq protein-RNA analysis</li>
+                        <li>scATAC-seq chromatin accessibility</li>
+                        <li>Single-cell DNA sequencing</li>
+                        <li>Multi-modal data integration</li>
+                    </ul>
+                </div>
+                <div class="research-card">
+                    <h3>💻 Computational Biology</h3>
+                    <ul>
+                        <li>Algorithm development for NGS analysis</li>
+                        <li>Machine learning for cancer classification</li>
+                        <li>Statistical modeling of genomic data</li>
+                        <li>Bioinformatics pipeline development</li>
+                        <li>Software tools for researchers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2>Selected Publications</h2>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <h3>[Publication Title 1] - Replace with your actual publication</h3>
+                    <p class="publication-meta"><strong>Nature</strong> | 2024 | Citations: XXX</p>
+                    <p>Brief description of the groundbreaking findings in this high-impact publication...</p>
+                    <div class="publication-links">
+                        <a href="#">PubMed</a>
+                        <a href="#">DOI</a>
+                        <a href="#">PDF</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3>[Publication Title 2] - Add your publications here</h3>
+                    <p class="publication-meta"><strong>Cell</strong> | 2023 | Citations: XXX</p>
+                    <p>Summary of key findings and impact...</p>
+                    <div class="publication-links">
+                        <a href="#">PubMed</a>
+                        <a href="#">DOI</a>
+                        <a href="#">PDF</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item">
+                    <h3>[Publication Title 3]</h3>
+                    <p class="publication-meta"><strong>Blood</strong> | 2023 | Citations: XXX</p>
+                    <p>Description of research contribution...</p>
+                    <div class="publication-links">
+                        <a href="#">PubMed</a>
+                        <a href="#">DOI</a>
+                        <a href="#">PDF</a>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 2rem;">
+                    <a href="https://scholar.google.com" class="btn">View All Publications on Google Scholar</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section id="software">
+        <div class="container">
+            <h2>Software & Tools</h2>
+            <div class="software-grid">
+                <div class="software-card">
+                    <h3>📊 [Tool Name 1]</h3>
+                    <p>Single-cell RNA-seq analysis pipeline for blood cancer research. Comprehensive toolkit for quality control, normalization, and downstream analysis.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">R</span>
+                        <span class="tech-badge">Bioconductor</span>
+                    </div>
+                    <p style="margin-top: 1rem;"><a href="https://github.com/yourusername/tool1" class="btn">View on GitHub</a></p>
+                </div>
+                
+                <div class="software-card">
+                    <h3>🧮 [Tool Name 2]</h3>
+                    <p>Advanced statistical methods for CITE-seq data integration and protein-RNA co-expression analysis.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python3</span>
+                        <span class="tech-badge">NumPy</span>
+                        <span class="tech-badge">Scanpy</span>
+                    </div>
+                    <p style="margin-top: 1rem;"><a href="https://github.com/yourusername/tool2" class="btn">View on GitHub</a></p>
+                </div>
+                
+                <div class="software-card">
+                    <h3>🔍 [Tool Name 3]</h3>
+                    <p>Machine learning framework for cancer subtype classification from multi-omics data.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">TensorFlow</span>
+                        <span class="tech-badge">scikit-learn</span>
+                    </div>
+                    <p style="margin-top: 1rem;"><a href="https://github.com/yourusername/tool3" class="btn">View on GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching">
+        <div class="container">
+            <h2>Teaching & Mentorship</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>📚 Courses</h3>
+                    <ul>
+                        <li><strong>Advanced Hematology</strong> - Graduate level</li>
+                        <li><strong>Computational Biology for Cancer Research</strong> - PhD program</li>
+                        <li><strong>Single-Cell Genomics</strong> - Workshop series</li>
+                        <li><strong>Bioinformatics Methods</strong> - Masters level</li>
+                    </ul>
+                </div>
+                
+                <div class="research-card">
+                    <h3>👥 Lab Members</h3>
+                    <p>I mentor graduate students, postdoctoral fellows, and research scientists in:</p>
+                    <ul>
+                        <li>Experimental hematology</li>
+                        <li>Computational analysis</li>
+                        <li>Scientific writing</li>
+                        <li>Career development</li>
+                    </ul>
+                </div>
+                
+                <div class="research-card">
+                    <h3>📖 Resources</h3>
+                    <ul>
+                        <li><a href="#">NGS Analysis Tutorials</a></li>
+                        <li><a href="#">Single-cell Analysis Workflows</a></li>
+                        <li><a href="#">Python for Biologists</a></li>
+                        <li><a href="#">Statistical Methods in Genomics</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <a href="mailto:your.email@mssm.edu">your.email@mssm.edu</a>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>Office</strong>
+                    Icahn School of Medicine at Mount Sinai<br>
+                    [Building Name], [Room Number]<br>
+                    New York, NY 10029
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://scholar.google.com">Google Scholar</a>
+                    <a href="https://github.com/yourusername">GitHub</a>
+                    <a href="https://orcid.org/your-orcid">ORCID</a>
+                    <a href="https://twitter.com/yourusername">Twitter</a>
+                    <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dr. [Your Name]. All rights reserved.</p>
+        <p>Last updated: October 2025</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
